@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+home page
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+        <div class="home-container">
+            <div class="box">
+                <h2>Student Management System</h2>
+                <p class="total-student">Total students: {{total_student}}</p>
+                <a class="manage-student-btn" href="{% url 'view_students' %}">
+                    Manage Student
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

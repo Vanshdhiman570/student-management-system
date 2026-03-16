@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add student
+{% endblock %}
+
+
+
+{% block content %}
+<div class="form-container">
+
+    <h2>Add Student</h2>
+
+    <form method="POST" class="student-form">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="submit-btn">Add Student</button>
+    </form>
+
+</div>
+{% endblock %}
