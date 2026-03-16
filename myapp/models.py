@@ -16,30 +16,3 @@ class Student(models.Model):
 
     email = models.EmailField()
     course = models.CharField(max_length=100)
-
-
-
-
-
-#
-# Projects
-
-# Student Management System | Django
-
-# Built a web-based student management application with CRUD functionality.
-
-# Implemented forms for adding and editing student data.
-
-# Displayed student records in a table with edit and delete actions.
-
-# Used Django messaging framework for success notifications.
-
-# Contact Book Application | Django
-
-# Developed a contact management web application using Django.
-
-# Implemented CRUD operations with search functionality.
-
-# Added JavaScript confirmation popup before deleting contacts.
-
-# Displayed contacts in a table with edit and delete options.#

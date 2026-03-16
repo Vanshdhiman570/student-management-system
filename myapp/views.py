@@ -15,13 +15,8 @@ def add_student(request):
         form = StudentForm(request.POST)
 
         if form.is_valid():
-            # name = form.cleaned_data['name']
-            # roll_no = form.cleaned_data['roll_no']
-            # email = form.cleaned_data['email']
-            # course = form.cleaned_data['course']
 
             form.save()
-            # Student.objects.create(name=name, roll_no=roll_no, email=email, course=course)
             messages.success(request, "Student added successfully!")
             
             return redirect('add_student')
@@ -62,72 +57,3 @@ def edit_student(request, id):
         form = StudentForm(instance=student)
 
     return render(request, 'edit_student.html', {"form": form})
-
-
-
-
-# =========================================================
-
-# Update it to something like this:
-
-# Technical Skills
-
-# Programming: Python
-
-# Framework: Django
-
-# Web Technologies: HTML, CSS
-
-# Concepts: CRUD Operations, Form Handling, Exception Handling
-
-# Tools: Git (Basic), VS Code
-
-# You were unsure about adding HTML & CSS, but you should include them because:
-
-# Django templates use HTML
-
-# Styling uses CSS
-
-# Recruiters expect them in a Django profile
-
-# You don’t need to claim advanced CSS, just listing them is fine.
-
-# 2️⃣ Update Your Projects Section
-
-# Your resume currently shows Python CLI projects, but now you have Django web projects, which are stronger.
-
-# Replace your projects with these:
-
-# Student Management System | Django
-
-# Developed a web-based system to manage student records using Django.
-
-# Implemented CRUD operations to add, view, update, and delete student data.
-
-# Displayed student records in a table with edit and delete actions.
-
-# Added search functionality and success messages for user feedback.
-
-# Contact Book Application | Django
-
-# Built a web application to manage personal contacts using Django.
-
-# Implemented CRUD functionality for adding, editing, and deleting contacts.
-
-# Added search feature to find contacts by name.
-
-# Implemented JavaScript confirmation popup before deleting contacts.
-
-# 3️⃣ One Small Resume Improvement (Important)
-
-# Your Objective currently says:
-
-# "Motivated BCA student seeking a Python Internship..."
-
-# Since you now work with Django, change it to:
-
-# Objective
-
-# Motivated BCA student seeking a Python/Django internship to apply programming and web development skills in building real-world applications.
-
-# This aligns better with your new skills.
