@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fj78k6!^e%%_cfc1phwb#%5!&0u1d+8w&awa*-5=d0u5atazi!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['myapp.koyeb.app'] #myapp.koyeb.app'
+ALLOWED_HOSTS = ['*'] #myapp.koyeb.app'
 
 
 # Application definition
