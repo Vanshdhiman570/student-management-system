@@ -1,15 +1,18 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from .forms import StudentForm
 from django.contrib import messages
 from .models import Student
 
 # Create your views here.
+@login_required
 def home(request):
    students = Student.objects.all()
    total_student = students.count()
    return render(request, 'home.html', {"total_student": total_student})
 
+@login_required
 def add_student(request):
     if request.method == 'POST':
         form = StudentForm(request.POST)
@@ -26,6 +29,7 @@ def add_student(request):
     return render(request, 'add_student.html', {"form": form})
 
 
+@login_required
 def view_students(request):
     search_query = request.GET.get('search')
 
@@ -37,6 +41,8 @@ def view_students(request):
 
     return render(request, 'view_student.html', {"students": students})
 
+
+@login_required
 def delete_student(request, id):
     student = get_object_or_404(Student, id=id)
     student.delete()
