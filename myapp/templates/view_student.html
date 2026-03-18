@@ -10,15 +10,18 @@ View students
 
 <div class="student-container">
     <p class="para">Manage Students</p>
-    <div class="search">
-        <form method="GET">
-            <input type="text" name="search" placeholder="Search student">
-            <button type="submit" class="search-btn">Search</button>
-            {% if request.GET.search %}
-                <a href="{% url 'view_students' %}" class="clear-btn">Clear</a>
-            {% endif %}
+    <div class="search mb-3">
+        <form method="GET" class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2">
+            <input type="text" name="search" placeholder="Search student" class="form-control search-box">
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary search-btn">Search</button>
+                {% if request.GET.search %}
+                    <a href="{% url 'view_students' %}" class="btn btn-secondary clear-btn">Clear</a>
+                {% endif %}
+            </div>
         </form>
     </div>
+
     {% if students %}
     <div class="table-responsive">
         <table>

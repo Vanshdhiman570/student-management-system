@@ -165,14 +165,15 @@ a:hover {
     width: 100%;
     display: flex;
     justify-content: center;
+   
 }
 
 .search-btn{
     background-color: #2d89ef;
-    color: pink;
     border: none;
     padding: 2px 10px;
     margin-left: 10px;
+
 }
 
 .search-btn:hover{
