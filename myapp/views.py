@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 from .forms import StudentForm
 from django.contrib import messages
 from .models import Student
@@ -38,8 +39,12 @@ def view_students(request):
 
     else:
         students = Student.objects.all()
+        
+    paginator = Paginator(students, 5) # Five students per page.
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
-    return render(request, 'view_student.html', {"students": students})
+    return render(request, 'view_student.html', {"page_obj": page_obj})
 
 
 @login_required
@@ -49,7 +54,7 @@ def delete_student(request, id):
     messages.success(request, "Student deleted successfully!")
     return redirect('view_students')
 
-
+@login_required
 def edit_student(request, id):
     student = get_object_or_404(Student, id=id)
 

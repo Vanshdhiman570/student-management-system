@@ -22,7 +22,7 @@ View students
         </form>
     </div>
 
-    {% if students %}
+    {% if page_obj %}
     <div class="table-responsive">
         <table>
             <tr>
@@ -33,7 +33,7 @@ View students
                 <th>Actions</th>
             </tr>
             
-            {% for student in students %}
+            {% for student in page_obj %}
             <tr>    
                 <td>{{student.name}}</td>
                 <td>{{student.roll_no}}</td>
@@ -47,6 +47,25 @@ View students
             {% endfor %}
             
         </table>
+        <div class="pagination-container">
+
+            {% if page_obj.has_previous %}
+                <a href="?search={{ request.GET.search }}&page={{ page_obj.previous_page_number }}" 
+               class="a-btn">Previous</a>
+            {% endif %}
+
+            <span class="page-info">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?search={{ request.GET.search }}&page={{ page_obj.next_page_number }}" 
+                class="a-btn">Next</a>
+            {% endif %}
+
+        </div>
+
+
     </div>
     {% else %}
         {% if request.GET.search %}
