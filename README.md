@@ -1,35 +1,33 @@
 # 🎓 Student Management System
 
-## 📌 Project Overview
-
-Student Management System is a Django-based web application that allows authenticated users to manage student records efficiently. The application provides complete CRUD (Create, Read, Update, Delete) functionality along with search, pagination, and form validation through a simple and responsive interface.
+A Django-based web application that allows authenticated users to efficiently manage student records. The application provides complete CRUD (Create, Read, Update, Delete) functionality along with search, pagination, form validation, and a responsive user interface.
 
 ---
 
-## ✨ Features
+## 📌 Features
 
-- User Authentication (Login Required)
-- Dashboard with Total Student Count
-- Add New Student
-- View Student Records
-- Update Student Information
-- Delete Student Records
-- Search Students by Name
-- Pagination (5 students per page)
-- Form Validation using Django ModelForm
-- Success Messages using Django Messages Framework
-- Responsive UI using Bootstrap
+- 🔐 User Authentication (Login Required)
+- 🏠 Dashboard displaying the total number of students
+- ➕ Add Student
+- 📋 View Student Records
+- ✏️ Update Student Information
+- 🗑️ Delete Student Records
+- 🔍 Search Students by Name
+- 📄 Pagination (5 students per page)
+- ✅ Form Validation using Django ModelForm
+- 💬 Success Messages using Django Messages Framework
+- 📱 Responsive User Interface using Bootstrap
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Python
+- Python 3
 - Django
 - SQLite
-- HTML
-- CSS
-- Bootstrap
+- HTML5
+- CSS3
+- Bootstrap 5
 - Django ORM
 
 ---
@@ -45,39 +43,85 @@ Each student record contains:
 
 ---
 
+## 📸 Screenshots
+
+### 🔐 Login Page
+
+![Login Page](screenshots/login.png)
+
+---
+
+### 🏠 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### ➕ Add Student
+
+![Add Student](screenshots/add-student.png)
+
+---
+
+### 📋 View Students
+
+![View Students](screenshots/view-students.png)
+
+---
+
+### 🔍 Search Students
+
+![Search Students](screenshots/search.png)
+
+---
+
+### ✏️ Edit Student
+
+![Edit Student](screenshots/edit-student.png)
+
+---
+
 ## 🚀 Installation
 
-Clone the repository:
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Vanshdhiman570/student-management-system.git
 ```
 
-Move into the project directory:
+### 2. Navigate to the project directory
 
 ```bash
 cd student-management-system
 ```
 
-Install dependencies:
+### 3. Install the required dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run migrations:
+### 4. Apply database migrations
 
 ```bash
 python manage.py migrate
 ```
 
-Start the development server:
+### 5. Create a superuser (Optional)
+
+```bash
+python manage.py createsuperuser
+```
+
+### 6. Run the development server
 
 ```bash
 python manage.py runserver
 ```
 
-Open your browser and visit:
+### 7. Open the application
+
+Visit:
 
 ```
 http://127.0.0.1:8000/
@@ -85,18 +129,32 @@ http://127.0.0.1:8000/
 
 ---
 
-## 📸 Screenshots
+## 📁 Project Structure
 
-Screenshots will be added soon.
+```text
+student-management-system/
+│
+├── Student_Management_System/
+├── myapp/
+├── screenshots/
+├── staticfiles/
+├── manage.py
+├── requirements.txt
+├── Procfile
+├── README.md
+└── .gitignore
+```
 
 ---
 
 ## 📈 Future Improvements
 
-- Search by Roll Number and Course
-- Student Detail Page
-- Better Dashboard
-- Export Student Data
+- Search by Roll Number, Email, and Course
+- Student Details Page
+- Dashboard with Student Statistics
+- Export Student Data (CSV/PDF)
+- Profile Images for Students
+- Improved User Interface
 
 ---
 
@@ -104,5 +162,10 @@ Screenshots will be added soon.
 
 **Vansh Dhiman**
 
-GitHub:
-https://github.com/Vanshdhiman570
+GitHub: https://github.com/Vanshdhiman570
+
+---
+
+## 📄 License
+
+This project is created for learning and portfolio purposes.
